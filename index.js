@@ -1,5 +1,6 @@
 var inquirer = require("inquirer");
 var fs = require('fs');
+var generateMarkdown = require("./utils/generateMarkdown.js");
 
 // array of questions for user
 const questions = [
@@ -40,21 +41,22 @@ const questions = [
     },
 
     {
-        type: "input",
+        type: "list",
         name: "license",
-        message: "License?"
-    },
-
-    {
-        type: "input",
-        name: "badge",
-        message: "Badge?"
+        message: "License?",
+        choices: [
+            "MIT",
+            "APACHE 2.0",
+            "GPL 3.0",
+            "BSD 3",
+            "None"
+        ]
     },
 
     {
         type: "input",
         name: "profile",
-        message: "GitHut profile?"
+        message: "GitHub profile?"
     },
 
     {
@@ -65,35 +67,24 @@ const questions = [
 
 ];
 
-inquirer.prompt(questions)
-.then(function(data) {
-
-    var filename = data.name.toLowerCase().split(" ").join("") + ".json";
-
-    fs.writeFile(filename, JSON.stringify(data, null, "\t"), function(err) {
-
-        if (err) {
-            return console.log(err);
-        };
-    
-        console.log("worked");
-    });
-    
-})
-
-// function to write README file
-function writeToFile(fileName, data) {
-
-
-
-
-
-
-};
 
 // function to initialize program
 function init() {
+    inquirer.prompt(questions)
+        .then(function (data) {
 
+            var filename = "README.md";
+
+            fs.writeFile(filename, generateMarkdown(data), function (err) {
+
+                if (err) {
+                    return console.log(err);
+                };
+
+                console.log("worked");
+            });
+
+        })
 }
 
 // function call to initialize program
