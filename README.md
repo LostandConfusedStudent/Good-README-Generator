@@ -1,23 +1,49 @@
-# Good-README-Generator
 
-## Description
+  # README Generator
 
-This is the homework for week nine. The purpose is to create an application that generates a professional README. This project will use the inquirer package from https://www.npmjs.com/package/inquirer and be executed using the following command: node index.js.
+  ![GitHub repo size](https://img.shields.io/github/repo-size/LostandConfusedStudent/README Generator)
+  
+  Produce a professional README.md file
+  
+  ## Installing README Generator
+  
+  To install README Generator, follow these steps:
+  
+  Linux and macOS:
+  ```
+  npm install
+  ```
+  
+  Windows:
+  ```
+  npm install
+  ```
+  ## Using README Generator
+  
+  To use README Generator, follow these steps:
+  
+  ```
+  node index.js
+  ```
 
-## Installation
+  ## Running tests for README Generator
+  
+  To run tests, follow these steps:
+  
+  ```
+  none
+  ```
+  
+  ## Contributing to README Generator
+  
+  Make a new README.md
+   
+  ## Contact
+  
+  If you want to contact me you can reach me at pfsun9999@msn.com.
+  
+  ## License
+  <!--- If you're not sure which open license to use see https://choosealicense.com/--->
+  
+  This project uses the following license: MIT.
 
-In the terminal, run the following command:
-npm install
-
-## Usage
-
-In the terminal, run the following command:
-node index.js
-
-## Demonstration
-
-* https://drive.google.com/file/d/1LitN1bAHuIIEQeT1FRYovQ79HYxdEDzd/view
-
-## Links
-
-* https://github.com/LostandConfusedStudent/Good-README-Generator
